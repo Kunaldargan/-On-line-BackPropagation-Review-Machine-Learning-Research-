@@ -1,0 +1,73 @@
+https://ia600400.us.archive.org/22/items/arxiv-1003.0358/1003.0358.pdf : Original Document
+SUMMARIZATION BY KUNAL DARGAN:
+‘Deep Big Simple Neural Nets Excel on Handwritten Digit Recognition’
+By Dan Claudiu Cires¸an, Ueli Meier, Luca Maria Gambardella, Jurgen Schmidhuber 
+
+Introduction and Aim of the Paper:
+Aim of the paper is to establish the fact that Deep Artificial Neural Networks works in complete harmony with on-line 
+Backpropagation to yield a very low error rate on the famous MNIST handwritten digits Benchmark and can be of great 
+commercial use and have varied implementation into fields ranging from banking, postal services etc. where better sorting and 
+identification of human handwriting is a tedious task and labor can be reduced significantly. Although paper doesn’t goes into 
+depth and didn’t explains nits and bits of On-line Back propagation which acts as the basis for all the exercise it has been 
+analyzed in the paper by (Garcia).
+
+In this given paper implementation has been boosted by making the use of GPU to greatly speedup the process of training and validation 
+and deformations has been applied over the MNIST data to make this Deep NN resistant to the variations.
+Literature review: Prominently by the advent other techniques which have been applied with neural networks such svms and other forms 
+of NN such as CNN and graph and tree based architectures ‘Combinations of NNs and SVMs (Lauer et al., 2007) etc. Convolutional neural 
+networks (CNNs) achieved a record-breaking 0.40% error rate (Simard et al., 2003), using novel elastic training image deformations’ 
+have been observed already and writer is interested in implementation of good old on-line Back propagation technique. 
+
+Techniques used: 
+As MNIST data consists of huge set of 60K images in al different form writer points out that training such a huge network as each image
+is built up pixels whose intensities are provided as inputs, “Pixel intensities of the original gray scale images range from
+0 (background) to 255 (max foreground intensity). 28×28 = 784 pixels per image get mapped to real values pixel intensity 127.5 −1.0 in
+[−1.0, 1.0], and are fed into the NN input layer”, would not be feasible nor possible in today’s technology even with the use highly
+efficient parallel computing ,even it can take long time if the case had been standard computers with standard back propagation .
+ To implement this project GPU accelerated NN or (GANN) has been used which makes use ‘2 core CPU and 3GB of RAM, and a GTX280 
+ graphics card’. Because the size of input as already stated is huge writer has proposed to input only 50000 images (training)
+ and 10000 (testing) images for this particular project to train and test the network.
+ 
+Architecture: 5 Deep NN or MLPS have been implemented with 2 to 9 hidden layers and varying number of hidden units. Standard 
+on-line Back propagation with variable learning rate is used which iteratively updates the weights assigned to hidden units or
+individual perceptron as a new input is provided for training from the train-set and works in a Heuristic fashion i.e. Stepwise 
+on the first step improves weights on training data and separately adjusts learning rate on testing set only hence after each epoch 
+learning rate decreases. This results in deep NN has almost 12 million free parameters. 
+Input data in the form of images has been deformed intentionally thus it increases inputs and makes networks insensitive to
+in-class variations. Affine Rotations, Scalling and shearing along with elastic deformation were obtained.
+
+ Result: Of this 10000 images which were input only 35 were not recognized or mere 0.35 % error was obtained which 
+ is significantly greater than 0.40% previously obtained from using CNN and Svms. Even in the best case on .32% error 
+ was found which even better any previous similar project is. On- line BP is the improved form of Back propagation algorithm 
+ which get optimized quickly .As computing power has grown significantly so even 1.12 million nodes in Deep Neural net of which 
+ they have created 5 samples get solved quickly by making use of GPU accelerated online- BP which adjusts learning rate after every 
+ transition. As already data was 60K images still to make the pool of training and testing can be infinitely increased by creating
+ variation in images by implementing various factors to transform images it makes Model more stable.
+Conclusion:
+As computing power has grown significantly ,results have shown that better hardware in future can solve even deeper
+NN in constant time or in significantly less time for given algorithms and Already GPUs which are way advanced from the 
+previous times along with On-line Back propagation helps in solving problems in a heuristic fashion and in limited time 
+and precision obtained on the “the very competitive MNIST handwriting benchmark, single precision floating-point GPU-based neural 
+nets surpass all previously reported results, including those obtained by much more complex methods involving specialized 
+architectures, unsupervised pretraining, combinations of machine learning classifiers etc.” , 0.32% error rate is significant
+reduction from previous best models and hence it proves that Deep neural nets doesn’t only hold high prominence in solving
+Handwriting detection rather other advanced problems also.
+
+Graphics Processing Unit
+Until 2007 the only way to program a GPU was to translate the problem-solving algorithm
+into a set of graphical operations. Despite being hard to code and difficult to
+debug, several GPU-based NN implementations were developed when GPUs became
+faster than CPUs. Two layer MLPs (Steinkraus et al., 2005) and CNNs (Chellapilla
+et al., 2005) have been previously implemented on GPUs. Although speedups were
+relatively modest, these studies showed how GPUs can be used for machine learning.
+More recent GPU-based CNNs trained in batch mode are two orders of magnitude faster
+than CPU-based CNNs (Scherer & Behnke, 2009).
+
+
+Bibliography
+Similar Paper with basis for explanation about On- Line Learning Back Propagation Algorithm:
+Garcia, S. D. (n.d.). An Online Backpropagation Algorithm with Validation Error-Based Adaptive Learning Rate. Orange Labs, 4, Rue du Clos Courtel, 35512 Cesson-S´evign´e, France.
+http://liris.cnrs.fr/Documents/Liris-6097.pdf 
+										Feedback Appreciated
+Contact: kdkunal.94@gmail.com					   EFFORTS BY: KUNAL DARGAN
+
