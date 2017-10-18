@@ -1,4 +1,4 @@
-# -On-line-BackPropagation-Review-Machine-Learning-Research-
+# On-line-BackPropagation-Review-Machine-Learning-Research-
 https://ia600400.us.archive.org/22/items/arxiv-1003.0358/1003.0358.pdf : Original Document
 SUMMARIZATION BY KUNAL DARGAN:
 
